@@ -5,7 +5,7 @@ import com.sun.istack.internal.NotNull;
 /**
  * Интерфейс для вывода элементов на экран
  */
-public interface Printable<T> {
+public interface Printable {
     @NotNull
-    String print(@NotNull T element);
+    String print();
 }

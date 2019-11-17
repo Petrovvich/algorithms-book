@@ -9,31 +9,36 @@ import org.springframework.validation.annotation.Validated;
 import ru.petrovich.algorithms.book.printing.Printable;
 
 /**
- * Реализация алгоритма "пузырьковой" сортировки применительно к массивам примитивов типа int
+ * Реализация алгоритма сортировки методом выбора применительно к массивам примитивов типа int
+ * Алгоритм сортировки методом выбора имеет лучшую по сравнению с алгоритмом сортировки пузырьковым методом скорость.
+ * Оценка алгоритма в О-нотации - О(N), где N - количество элементов в массиве.
+ * Иными словами алгоритм имеет линейную сложность (время сортировки массива растет линейно при росте
+ * количества элементов в массиве).
  */
 @Slf4j
 @Getter
 @Builder
 @Validated
 @AllArgsConstructor
-public class BubbleSortingAlgorithm extends SortingAlgorithm<Boolean> implements Printable<int[]> {
+public class SelectionSorting extends SortingAlgorithm<Boolean> implements Printable {
     @NotNull
     private int[] arrayToSort;
     @NotNull
     private int arraySize;
 
     @Override
-    @NotNull
     public Boolean sort() {
         if (arrayToSort.length == 0) {
+            log.error("Not enough data to sort in array");
             return false;
         }
-        log.debug("Start sorting array with {} number of elements", arrayToSort.length);
-        int out, in;
-        for (out = arraySize - 1; out > 1; out--) {
-            for (in = 0; in < out; in++) {
-                if (arrayToSort[in] > arrayToSort[in + 1]) {
-                    swap(in, in + 1);
+        int out, in, min;
+        for (out = 0; out < arrayToSort.length - 1; out++) {
+            min = out;
+            for (in = out + 1; in < arrayToSort.length; in++) {
+                if (arrayToSort[in] < arrayToSort[min]) {
+                    min = in;
+                    swap(out, min);
                 }
             }
         }
@@ -55,22 +60,7 @@ public class BubbleSortingAlgorithm extends SortingAlgorithm<Boolean> implements
     }
 
     @Override
-    @NotNull
-    public String print(@NotNull int[] element) {
-        if (element.length == 0) {
-            return "Not enough data in array to print";
-        }
-        StringBuilder sb = new StringBuilder();
-        log.debug("Start print array with ");
-        for (int i = 0; i < element.length; i++) {
-            sb.append("Elements in array under ")
-                    .append(i)
-                    .append(" position is ")
-                    .append(element[i])
-                    .append("\r\n");
-        }
-        return sb.toString();
+    public String print() {
+        return null;
     }
 }
-
-
