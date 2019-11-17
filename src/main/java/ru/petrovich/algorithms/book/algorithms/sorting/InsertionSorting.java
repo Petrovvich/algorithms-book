@@ -10,22 +10,21 @@ import ru.petrovich.algorithms.book.printing.Printable;
 import javax.validation.constraints.NotNull;
 
 /**
- * Реализация алгоритма сортировки методом выбора применительно к массивам примитивов типа int. <br>
- * Алгоритм сортировки методом выбора имеет лучшую по сравнению с алгоритмом сортировки пузырьковым методом скорость
- * за счет меньшего количества перестановок. <br>
+ * Реализация алгоритма сортировки методом вставки применительно к массивам примитивов типа int. <br>
+ * Алгоритм сортировки методом вставки имеет практически такую же как у алгоритма сортировки выбором скорость. <br>
  * Оценка алгоритма в О-нотации - О(N*N), где N - количество элементов в массиве. <br>
- * Иными словами алгоритм имеет квадратичную сложность.
  */
 @Slf4j
 @Getter
 @Builder
 @Validated
 @AllArgsConstructor
-public class SelectionSorting extends SortingAlgorithm<Boolean> implements Printable {
+public class InsertionSorting extends SortingAlgorithm<Boolean> implements Printable {
     @NotNull
     private int[] arrayToSort;
     @NotNull
     private int arraySize;
+
 
     @Override
     public Boolean sort() {
@@ -33,15 +32,15 @@ public class SelectionSorting extends SortingAlgorithm<Boolean> implements Print
             log.error("Not enough data to sort in array");
             return false;
         }
-        int out, in, min;
-        for (out = 0; out < arraySize - 1; out++) {
-            min = out;
-            for (in = out + 1; in < arraySize; in++) {
-                if (arrayToSort[in] < arrayToSort[min]) {
-                    min = in;
-                    swap(out, min);
-                }
+        int in, out;
+        for (out = 1; out < arraySize; out++) {
+            int temp = arrayToSort[out];
+            in = out;
+            while (in > 0 && arrayToSort[in - 1] >= temp) {
+                arrayToSort[in] = arrayToSort[in - 1];
+                --in;
             }
+            arrayToSort[in] = temp;
         }
         return true;
     }

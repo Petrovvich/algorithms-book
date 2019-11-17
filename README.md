@@ -5,4 +5,5 @@
 
 ### Рассмотренные алгоритмы
 1. Алгоритм пузырьковой сортировки - класс [BubbleSorting](https://github.com/Petrovvich/algorithms-book/blob/develop/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/BubbleSorting.java)
-2. Алгоритм сортировки методом выбора - класс [SelectionSorting](https://github.com/Petrovvich/algorithms-book/blob/develop/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/SelectionSorting.java)
+1. Алгоритм сортировки методом выбора - класс [SelectionSorting](https://github.com/Petrovvich/algorithms-book/blob/develop/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/SelectionSorting.java)
+1. Алгоритм сортировки методом вставки - класс [InsertionSorting](https://github.com/Petrovvich/algorithms-book/blob/develop/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/InsertionSorting.java)

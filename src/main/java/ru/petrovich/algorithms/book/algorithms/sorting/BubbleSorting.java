@@ -1,6 +1,5 @@
 package ru.petrovich.algorithms.book.algorithms.sorting;
 
-import com.sun.istack.internal.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -8,10 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import ru.petrovich.algorithms.book.printing.Printable;
 
+import javax.validation.constraints.NotNull;
+
 /**
- * Реализация алгоритма "пузырьковой" сортировки применительно к массивам примитивов типа int
- * Алгоритм пузырьковой сортировки является наиболее медленным алгоритмом среди существующих.
- * Оценка алгоритма в О-нотации O(N*N), иными словами алгоритм имеет квадратичную сложность.
+ * Реализация алгоритма "пузырьковой" сортировки применительно к массивам примитивов типа int. <br>
+ * Алгоритм пузырьковой сортировки является наиболее медленным алгоритмом среди существующих. <br>
+ * Оценка алгоритма в О-нотации O(N*N), иными словами алгоритм имеет квадратичную сложность. <br>
  * Для полной сортировки массива требуется в общем случае N-1 проходов по массиву, где N - размер массива.
  */
 @Slf4j
@@ -31,7 +32,7 @@ public class BubbleSorting extends SortingAlgorithm<Boolean> implements Printabl
         if (arrayToSort.length == 0) {
             return false;
         }
-        log.debug("Start sorting array with {} number of elements", arrayToSort.length);
+        log.debug("Start sorting array with {} number of elements", arraySize);
         int out, in;
         for (out = arraySize - 1; out > 1; out--) {
             for (in = 0; in < out; in++) {
@@ -57,22 +58,9 @@ public class BubbleSorting extends SortingAlgorithm<Boolean> implements Printabl
         log.debug("Finish swap two int variables, first variable {}, second variable {}", first, second);
     }
 
-    @Override
     @NotNull
     public String print() {
-        if (arrayToSort.length == 0) {
-            return "Not enough data in array to print";
-        }
-        StringBuilder sb = new StringBuilder();
-        log.debug("Start print array with ");
-        for (int i = 0; i < arrayToSort.length; i++) {
-            sb.append("Elements in array under ")
-                    .append(i)
-                    .append(" position is ")
-                    .append(arrayToSort[i])
-                    .append("\r\n");
-        }
-        return sb.toString();
+        return print(arrayToSort);
     }
 }
 

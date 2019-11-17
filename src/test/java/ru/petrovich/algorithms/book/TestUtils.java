@@ -6,6 +6,7 @@ import java.util.Random;
  * Вспомогательный класс для часто повторяющихся операций в тестах
  */
 class TestUtils {
+    static final int DEFAULT_ARRAY_SIZE = 200;
     /**
      * Генерация массива псевдослучайных чисел в заданном интервале
      *
