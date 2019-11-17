@@ -1,0 +1,6 @@
+server:
+  port: 8236
+
+spring:
+  application:
+    name: algorithms
