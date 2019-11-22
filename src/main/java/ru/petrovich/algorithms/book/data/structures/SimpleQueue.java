@@ -5,6 +5,7 @@ import ru.petrovich.algorithms.book.error.QueueOverflowException;
 
 /**
  * Реализация простейшей очереди - структуры данных, организованной по принципу FIFO (First In First Out). <br>
+ * Помещение и извлечение элементов производится за постоянное время - О(1). <br>
  */
 public class SimpleQueue {
     private int capacity, first, last, elementsSize;
