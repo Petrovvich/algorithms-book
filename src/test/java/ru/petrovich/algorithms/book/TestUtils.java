@@ -7,6 +7,8 @@ import java.util.Random;
  */
 public class TestUtils {
     public static final int DEFAULT_ARRAY_SIZE = 200;
+    public static final int INITIAL_INT_DATA = 14;
+    public static final double INITIAL_DOUBLE_DATA = 14.0d;
 
     /**
      * Генерация массива псевдослучайных чисел в заданном интервале

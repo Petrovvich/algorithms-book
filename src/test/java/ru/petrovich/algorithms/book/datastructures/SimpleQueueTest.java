@@ -8,7 +8,7 @@ import ru.petrovich.algorithms.book.error.QueueEmptyException;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class SimpleQueueTest {
+class SimpleQueueTest {
 
     @Test
     void simpleTest() {
