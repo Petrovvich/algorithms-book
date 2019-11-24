@@ -112,11 +112,11 @@ public class SimpleLinkedList {
                 previous = current;
                 current = current.getNext();
             }
-            if (current == first) {
-                first = first.getNext();
-            } else {
-                previous.setNext(current.getNext());
-            }
+        }
+        if (current == first) {
+            first = first.getNext();
+        } else {
+            previous.setNext(current.getNext());
         }
         return current;
     }

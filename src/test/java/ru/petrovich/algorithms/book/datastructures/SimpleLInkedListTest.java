@@ -47,4 +47,10 @@ class SimpleLInkedListTest {
         assertEquals(INITIAL_INT_DATA, instance.getFirst().getIntData());
         assertEquals(INITIAL_DOUBLE_DATA, instance.getFirst().getDoubleData());
     }
+
+    @Test
+    void deleteByKeyTest() throws IllegalAccessException {
+        instance.deleteByKey(INITIAL_INT_DATA);
+        assertNull(instance.getFirst());
+    }
 }
