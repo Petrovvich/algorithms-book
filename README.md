@@ -11,3 +11,5 @@
 ### Рассмотренные структуры данных
 1. Стек (LIFO) - класс [SimpleStack](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/data/structures/SimpleStack.java)
 1. Очередь (FIFO) - класс [SimpleQueue](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/data/structures/SimpleQueue.java)
+1. Приоритутная очередь - класс [SimplePriorityQueue](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/data/structures/SimplePriorityQueue.java)
+1. Связанный список - класс [SimpleLinkedList](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/data/structures/SimpleLinkedList.java)
