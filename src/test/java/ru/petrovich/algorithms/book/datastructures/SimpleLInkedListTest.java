@@ -15,7 +15,7 @@ class SimpleLInkedListTest {
     private static SimpleLinkedList instance;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         instance = SimpleLinkedList.builder()
                 .first(Link.builder()
                         .intData(INITIAL_INT_DATA)

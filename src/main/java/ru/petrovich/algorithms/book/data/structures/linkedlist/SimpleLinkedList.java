@@ -17,10 +17,12 @@ import lombok.extern.slf4j.Slf4j;
 public class SimpleLinkedList {
     private Link first;
 
-    public boolean isEmpty() {
-        return first == null;
-    }
-
+    /**
+     * Вставка первым элементом в спискок
+     *
+     * @param intValue    значение
+     * @param doubleValue еще одно значение
+     */
     public void insertFirst(int intValue, double doubleValue) {
         Link newLink = Link.builder()
                 .intData(intValue)
@@ -30,9 +32,15 @@ public class SimpleLinkedList {
         first = newLink;
     }
 
+    /**
+     * Удаление первого элемента из списка
+     *
+     * @return бывший первый элемент
+     * @throws IllegalAccessException если список пуст
+     */
     public Link deleteFirst() throws IllegalAccessException {
         if (isEmpty()) {
-            log.error("List are empty");
+            log.error("deleteFirst: list are empty");
             throw new IllegalAccessException("List are empty");
         }
         Link tmp = first;
@@ -40,6 +48,9 @@ public class SimpleLinkedList {
         return tmp;
     }
 
+    /**
+     * Печать в лог элементов списка
+     */
     public void print() {
         Link tmp = first;
         while (tmp != null) {
@@ -47,4 +58,67 @@ public class SimpleLinkedList {
             tmp = tmp.getNext();
         }
     }
+
+    /**
+     * Поиск элемента в списке по ключу
+     *
+     * @param linKey ключ поиска
+     * @return null или элемент, содержащий ключ
+     * @throws IllegalAccessException если список пуст
+     */
+    public Link find(int linKey) throws IllegalAccessException {
+        if (isEmpty()) {
+            log.error("find: list are empty");
+            throw new IllegalAccessException("List are empty");
+        }
+        Link tmp = first;
+        while (tmp.getIntData() != linKey) {
+            if (tmp.getNext() == null) {
+                return null;
+            } else {
+                tmp = tmp.getNext();
+            }
+        }
+        return tmp;
+    }
+
+    /**
+     * Проверка на наличе элементов в списке
+     *
+     * @return есть ли элементы
+     */
+    public boolean isEmpty() {
+        return first == null;
+    }
+
+    /**
+     * Поиск и удаление элемента по ключу
+     *
+     * @param key ключ элемента
+     * @return элемент, содержащий ключ
+     * @throws IllegalAccessException если список пуст
+     */
+    public Link deleteByKey(int key) throws IllegalAccessException {
+        if (isEmpty()) {
+            log.error("deleteByKey: list are empty");
+            throw new IllegalAccessException("List are empty");
+        }
+        Link current = first;
+        Link previous = first;
+        while (current.getIntData() != key) {
+            if (current.getNext() == null) {
+                return null;
+            } else {
+                previous = current;
+                current = current.getNext();
+            }
+            if (current == first) {
+                first = first.getNext();
+            } else {
+                previous.setNext(current.getNext());
+            }
+        }
+        return current;
+    }
+
 }
