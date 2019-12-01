@@ -8,6 +8,7 @@
 1. Алгоритм сортировки методом выбора - класс [SelectionSorting](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/SelectionSorting.java)
 1. Алгоритм сортировки методом вставки - класс [InsertionSorting](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/InsertionSorting.java)
 1. Алгоритм сортировки методом слияния - класс [MergingSorting](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/MergingSorting.java)
+1. Алгоритм сортировки методом Шелла - класс [ShellSorting](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/algorithms/sorting/ShellSorting.java)
 
 ### Рассмотренные структуры данных
 1. Стек (LIFO) - класс [SimpleStack](https://github.com/Petrovvich/algorithms-book/blob/master/src/main/java/ru/petrovich/algorithms/book/data/structures/SimpleStack.java)

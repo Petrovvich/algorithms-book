@@ -45,20 +45,6 @@ public class InsertionSorting extends SortingAlgorithm<Boolean> implements Print
         return true;
     }
 
-    /**
-     * Метод замены местами двух элементов массива
-     *
-     * @param first  первый элемент
-     * @param second второй элемент
-     */
-    private void swap(int first, int second) {
-        log.debug("Start swap two int variables, first variable {}, second variable {}", first, second);
-        int temp = arrayToSort[first];
-        arrayToSort[first] = arrayToSort[second];
-        arrayToSort[second] = temp;
-        log.debug("Finish swap two int variables, first variable {}, second variable {}", first, second);
-    }
-
     @NotNull
     public String print() {
         return print(arrayToSort);
