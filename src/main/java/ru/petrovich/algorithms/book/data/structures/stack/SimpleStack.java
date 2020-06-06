@@ -1,4 +1,4 @@
-package ru.petrovich.algorithms.book.data.structures;
+package ru.petrovich.algorithms.book.data.structures.stack;
 
 /**
  * Реализация простейшего стека - структуры данных, организованной по принципу LIFO (Last In First Out). <br>

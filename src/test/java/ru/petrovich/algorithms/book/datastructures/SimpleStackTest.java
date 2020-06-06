@@ -2,7 +2,7 @@ package ru.petrovich.algorithms.book.datastructures;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.petrovich.algorithms.book.data.structures.SimpleStack;
+import ru.petrovich.algorithms.book.data.structures.stack.SimpleStack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
