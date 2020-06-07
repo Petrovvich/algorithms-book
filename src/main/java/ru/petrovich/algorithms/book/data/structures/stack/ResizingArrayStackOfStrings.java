@@ -1,6 +1,6 @@
 package ru.petrovich.algorithms.book.data.structures.stack;
 
-public class ResizingArrayStackOfStrings implements Stack {
+public class ResizingArrayStackOfStrings implements Stack<String> {
     private String[] stringArray;
     private int cursor = 0;
 

@@ -2,7 +2,7 @@ package ru.petrovich.algorithms.book.datastructures;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.petrovich.algorithms.book.data.structures.SimpleQueue;
+import ru.petrovich.algorithms.book.data.structures.queue.SimpleQueue;
 import ru.petrovich.algorithms.book.error.QueueEmptyException;
 
 import static org.junit.jupiter.api.Assertions.*;

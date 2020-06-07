@@ -1,6 +1,6 @@
 package ru.petrovich.algorithms.book.data.structures.stack;
 
-public class FixedCapacityStackOfStrings implements Stack {
+public class FixedCapacityStackOfStrings implements Stack<String> {
     private String[] stringArray;
     private int cursor = 0;
 

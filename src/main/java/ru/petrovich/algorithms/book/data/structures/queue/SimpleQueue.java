@@ -1,4 +1,4 @@
-package ru.petrovich.algorithms.book.data.structures;
+package ru.petrovich.algorithms.book.data.structures.queue;
 
 import ru.petrovich.algorithms.book.error.QueueEmptyException;
 import ru.petrovich.algorithms.book.error.QueueOverflowException;

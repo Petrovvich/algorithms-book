@@ -1,4 +1,4 @@
-package ru.petrovich.algorithms.book.data.structures;
+package ru.petrovich.algorithms.book.data.structures.queue;
 
 /**
  * Реализация приоритетной очереди - структуры данных в которой элементы упорядочены по приоритету

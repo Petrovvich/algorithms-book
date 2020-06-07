@@ -1,8 +1,8 @@
 package ru.petrovich.algorithms.book.data.structures.stack;
 
-public interface Stack {
+public interface Stack<T> {
 
-    void push(String item);
-    String pop();
+    void push(T item);
+    T pop();
     boolean isEmpty();
 }
